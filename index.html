@@ -16,14 +16,15 @@
 <body>
     <div class="container-fluid">
         <div class="row cars">
-            <div class="col-4">Cars will go here
+            <div class="col-4">
+                <div id="cars"></div>Cars will go here
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#car-form">
                     Add a Car
                 </button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+                <div class="modal fade" id="car-form" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
                     aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -34,7 +35,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form onsubmit="app.carController.addCar(event)">
+                                <form onsubmit="app.carsController.addCar(event)">
                                     <div class="form-group">
                                         <label for="make">Make</label>
                                         <input type="text" name="make" class="form-control"
@@ -78,6 +79,7 @@
         </div>
         <div class="row house">
             <div class="col-4">Houses will go here
+                <div id="idhouse"></div>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId2">
                     Add a House
@@ -95,41 +97,42 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="houseNumber">House Number</label>
-                                    <input type="number" name="houseNumber" id="" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="streetName">Street Name</label>
-                                    <input type="text" name="streetName" id="" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="city">City</label>
-                                    <input type="text" name="city" id="" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="state">State</label>
-                                    <input type="text" name="state" id="" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="zipcode">Zip Code</label>
-                                    <input type="number" max="99999" name="Zip Code" id="" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="bedrooms">Number of Bedrooms</label>
-                                    <input type="number" name="bedrooms" id="" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="bathrooms">Number of Bathrooms</label>
-                                    <input type="text" name="bathrooms" id="" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="description">Description</label>
-                                    <input type="text" name="description" class="form-control"
-                                        placeholder="Enter a description here...">
-                                </div>
-                                <button type="button" class="btn btn-primary">Save</button>
-
+                                <form onsubmit="app.houseController.addHouse(event)">
+                                    <div class="form-group">
+                                        <label for="houseNumber">House Number</label>
+                                        <input type="number" name="houseNumber" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="streetName">Street Name</label>
+                                        <input type="text" name="streetName" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" name="city" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="state">State</label>
+                                        <input type="text" name="state" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="zipcode">Zip Code</label>
+                                        <input type="number" max="99999" name="zipCode" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bedrooms">Number of Bedrooms</label>
+                                        <input type="number" name="bedrooms" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bathrooms">Number of Bathrooms</label>
+                                        <input type="text" name="bathrooms" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <input type="text" name="description" class="form-control"
+                                            placeholder="Enter a description here...">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -161,22 +164,22 @@
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="jobTitle">Job Title</label>
-                                    <input type="text" name="jobTitle" id="" class="form-control">
+                                    <input type="text" name="jobTitle" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="salary">Salary</label>
-                                    <input type="number" min="0" name="salary" id="" class="form-control">
+                                    <input type="number" min="0" name="salary" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="location">Location</label>
-                                    <input type="text" name="location" id="" class="form-control">
+                                    <input type="text" name="location" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="jobDescription">Job Description</label>
-                                    <input type="text" name="jobDescription" id="" class="form-control">
+                                    <input type="text" name="jobDescription" class="form-control">
                                 </div>
 
-                                <button type="button" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Save</button>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
